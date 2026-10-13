@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "klfx",
+  "version": "${version}",
+  "name": "Kill Effects",
+  "description": "custom effects upon kills",
+  "authors": ["wys"],
+  "license": "All Rights Reserved",
+  "icon": "assets/klfx/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.klfx.KlfxClnt"],
+    "modmenu": ["dev.klfx.ModmenuIntgr"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*",
+    "cloth-config": "*"
+  }
+}
