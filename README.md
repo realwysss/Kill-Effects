@@ -1,3 +1,5 @@
+<p align="center"><img src="src/main/resources/assets/klfx/icon.png" width="128"></p>
+
 # kill effects
 
 client side fabric mod for minecraft 1.21.11. when you kill a mob or a player, an effect plays where they died.
