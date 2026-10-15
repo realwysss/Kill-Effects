@@ -5,7 +5,7 @@
   "name": "Kill Effects",
   "description": "custom effects upon kills",
   "authors": ["wys"],
-  "license": "All Rights Reserved",
+  "license": "All-Rights-Reserved",
   "icon": "assets/klfx/icon.png",
   "environment": "client",
   "entrypoints": {

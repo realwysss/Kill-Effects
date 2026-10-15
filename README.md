@@ -18,6 +18,6 @@ you need fabric loader 0.19 or newer, fabric api, cloth config and mod menu. put
 
 ## build
 
-`./gradlew build`, the jar ends up in build/libs. `./gradlew runClientGameTest` runs the tests.
+`./gradlew build`, the jar ends up in build/libs.
 
-all rights reserved, see LICENSE.
+all rights reserved. made by wysss.
