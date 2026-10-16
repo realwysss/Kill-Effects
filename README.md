@@ -14,7 +14,7 @@ open mod menu, find kill effects and click config. you can pick the effects, tur
 
 ## install
 
-you need fabric loader 0.19 or newer, fabric api, cloth config and mod menu. put the jar from the releases page in your mods folder.
+you need fabric loader 0.19 or newer, fabric api and [Wysss Library](https://github.com/realwysss/Wysss-Library) (mod menu is optional). open the menu with **P**. put the jar from the releases page in your mods folder.
 
 ## build
 
