@@ -21,3 +21,5 @@ you need fabric loader 0.19 or newer, fabric api, cloth config and mod menu. put
 `./gradlew build`, the jar ends up in build/libs.
 
 all rights reserved. made by wysss.
+
+the menu needs [Wysss Library](https://github.com/realwysss/Wysss-Library) installed.

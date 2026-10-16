@@ -23,12 +23,14 @@ public class KlfxClnt implements ClientModInitializer {
 	public static int kls;
 	public static List<Fx> lstFx;
 	public static KeyMapping tgl;
+	public static KeyMapping opn;
 
 	@Override
 	public void onInitializeClient() {
 		Cfg.ld();
-		tgl = KeyBindingHelper.registerKeyBinding(new KeyMapping("key.klfx.tgl", InputConstants.UNKNOWN.getValue(),
-				KeyMapping.Category.register(Identifier.fromNamespaceAndPath("klfx", "main"))));
+		KeyMapping.Category cg = KeyMapping.Category.register(Identifier.fromNamespaceAndPath("klfx", "main"));
+		tgl = KeyBindingHelper.registerKeyBinding(new KeyMapping("key.klfx.tgl", InputConstants.UNKNOWN.getValue(), cg));
+		opn = KeyBindingHelper.registerKeyBinding(new KeyMapping("key.klfx.open", InputConstants.KEY_P, cg));
 		AttackEntityCallback.EVENT.register((p, w, h, e, r) -> {
 			if (w.isClientSide() && p == Minecraft.getInstance().player) {
 				long n = w.getGameTime();
@@ -44,6 +46,10 @@ public class KlfxClnt implements ClientModInitializer {
 				Cfg.c.on = !Cfg.c.on;
 				Cfg.sv();
 				if (m.player != null) m.player.displayClientMessage(Component.literal("Kill Effects: " + (Cfg.c.on ? "ON" : "OFF")), true);
+			}
+			while (opn.consumeClick()) if (m.screen == null) {
+				if (net.fabricmc.loader.api.FabricLoader.getInstance().isModLoaded("wysslib")) m.setScreen(Gui.open(null));
+				else if (m.player != null) m.player.displayClientMessage(Component.literal("Kill Effects needs Wysss Library to open its menu"), true);
 			}
 			tk(m);
 		});
